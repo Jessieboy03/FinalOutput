@@ -64,7 +64,7 @@ $customer = $stmt->fetch(PDO::FETCH_ASSOC);
                             </td>
                         </tr>
                         <?php
-                        // Call the function to calculate the amortization schedule
+                        
                         $schedule = calculateAmortization($amortization['principal_amount'], $amortization['interest_rate'], $amortization['loan_term']);
                         ?>
                         <tr>
@@ -102,7 +102,6 @@ $customer = $stmt->fetch(PDO::FETCH_ASSOC);
     </div>
 </div>
 
-<!-- Add Amortization Modal -->
 <div class="modal fade" id="addAmortizationModal" tabindex="-1" role="dialog" aria-labelledby="addAmortizationModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -141,7 +140,6 @@ $customer = $stmt->fetch(PDO::FETCH_ASSOC);
     </div>
 </div>
 
-<!-- Edit Amortization Modal -->
 <div class="modal fade" id="editAmortizationModal" tabindex="-1" role="dialog" aria-labelledby="editAmortizationModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
