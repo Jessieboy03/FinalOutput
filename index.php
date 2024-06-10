@@ -1,7 +1,6 @@
 <?php
 include 'database.php';
 
-// Fetch customers
 $stmt = $conn->prepare("SELECT * FROM customers");
 $stmt->execute();
 $customers = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -53,7 +52,6 @@ $customers = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </table>
 </div>
 
-<!-- Add Customer Modal -->
 <div class="modal fade" id="addCustomerModal" tabindex="-1" role="dialog" aria-labelledby="addCustomerModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -87,7 +85,6 @@ $customers = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </div>
 </div>
 
-<!-- Edit Customer Modal -->
 <div class="modal fade" id="editCustomerModal" tabindex="-1" role="dialog" aria-labelledby="editCustomerModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
